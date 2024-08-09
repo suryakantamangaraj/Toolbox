@@ -1,6 +1,3 @@
-Certainly! Here's the entire `README.md` file written in Markdown format:
-
-```markdown
 # Tools by Suryaraj
 
 Welcome to the **Tools** repository! This repository houses a collection of web-based utilities, including calculators, converters, and other handy tools. Each tool is developed in a modular fashion, making it easy to add, maintain, and scale as new functionalities are introduced.
