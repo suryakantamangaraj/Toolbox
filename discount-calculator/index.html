@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+    <link rel="stylesheet" href="../template/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <div class="content">
+        <h1>Discount Calculator</h1>
+        <label for="original-price">Original Price:</label>
+        <input type="number" id="original-price" placeholder="Enter original price">
+        
+        <label for="discount-percentage">Discount Percentage:</label>
+        <input type="number" id="discount-percentage" placeholder="Enter discount percentage">
+
+        <button onclick="calculateDiscount()">Calculate Discount</button>
+        
+        <p id="discount-result"></p>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load header and footer
+        fetch('../template/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('../template/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
+        
+        // Discount calculation logic
+        function calculateDiscount() {
+            const originalPrice = parseFloat(document.getElementById('original-price').value);
+            const discountPercentage = parseFloat(document.getElementById('discount-percentage').value);
+
+            if (isNaN(originalPrice) || isNaN(discountPercentage)) {
+                document.getElementById('discount-result').innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            const discountAmount = (originalPrice * discountPercentage) / 100;
+            const finalPrice = originalPrice - discountAmount;
+
+            document.getElementById('discount-result').innerText = `Discount Amount: $${discountAmount.toFixed(2)} \nFinal Price: $${finalPrice.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
