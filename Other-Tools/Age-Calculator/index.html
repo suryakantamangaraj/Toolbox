@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
     <link rel="stylesheet" href="../../template/style.css">
+    <link rel="stylesheet" href="local-style.css"> <!-- Link to the local styles -->
     <meta name="description" content="Calculate your age accurately with our easy-to-use Age Calculator. Enter your date of birth and find out your exact age in years, months, and days.">
     <meta name="keywords" content="Age Calculator, Calculate Age, Date of Birth, Age in Years, Age in Months, Age in Days">
 </head>
@@ -14,6 +15,7 @@
 
     <div class="content">
         <h1>Age Calculator</h1>
+        <p>Calculate your exact age in years, months, and days.</p>
         <input type="date" id="dob">
         <button onclick="calculateAge()">Calculate Age</button>
         <p id="result"></p>
@@ -27,24 +29,6 @@
         // Load header and footer
         fetch('../../template/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
         fetch('../../template/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
-
-        // Calculate Age Function
-        function calculateAge() {
-            const dob = document.getElementById('dob').value;
-            const result = document.getElementById('result');
-            if (dob) {
-                const birthDate = new Date(dob);
-                const today = new Date();
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const monthDifference = today.getMonth() - birthDate.getMonth();
-                if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
-                    age--;
-                }
-                result.textContent = `Your age is ${age} years.`;
-            } else {
-                result.textContent = 'Please enter your date of birth.';
-            }
-        }
     </script>
 </body>
 </html>
