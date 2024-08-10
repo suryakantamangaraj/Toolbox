@@ -37,7 +37,7 @@ body {
 }
 
 .right-header {
-    margin-left: auto; /* Pushes the right-header link to the far right */
+    /*margin-left: auto; /* Pushes the right-header link to the far right */
     font-size: 1.2em; /* Slightly larger font size */
 }
 
