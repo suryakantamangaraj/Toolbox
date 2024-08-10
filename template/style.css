@@ -31,24 +31,25 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual appeal */
 }
 
-.left-header {
+.left-header a {
     text-align: left;
     font-size: 1.5em; /* Increase font size for better visibility */
     font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the text color is white */
+    text-decoration: none; /* Remove underline */
 }
 
-.right-header {
+.right-header a {
     text-align: right;
-    margin-left: auto; /* Pushes the right-header link to the far right */
     font-size: 1.2em; /* Slightly larger font size */
     text-decoration: none; /* Remove underline */
     color: white; /* Ensure the text color is white */
 }
 
-.right-header:hover {
+.right-header a:hover, .left-header a:hover {
     text-decoration: underline; /* Add underline on hover for better interactivity */
 }
-
+/*
 #header a {
     color: white;
     text-decoration: none;
@@ -57,6 +58,7 @@ body {
 #header a:hover {
     text-decoration: underline;
 }
+    */
   
 .content {
     flex: 1;
