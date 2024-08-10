@@ -16,6 +16,9 @@
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   #header {
@@ -37,16 +40,10 @@
     text-decoration: underline;
   }
   
-  #footer {
-    background-color: var(--primary-color-dark);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 0.9em;
-  }
-  
   .content {
+    flex: 1;
     padding: 20px;
+    text-align: center;
   }
   
   h1 {
@@ -57,21 +54,44 @@
     color: var(--primary-color);
   }
   
-  ul {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .categories ul {
     list-style: none;
     padding: 0;
   }
   
-  ul li {
+  .categories ul li {
     margin: 10px 0;
   }
   
-  ul li a {
+  .categories ul li a {
     text-decoration: none;
     color: var(--primary-color-lightest);
   }
   
-  ul li a:hover {
+  .categories ul li a:hover {
     text-decoration: underline;
   }
+  
+  .all-tools {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  #footer {
+    background-color: var(--primary-color-dark);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+  }
+  
   
