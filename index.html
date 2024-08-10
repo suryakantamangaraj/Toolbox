@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Collection</title>
+    <link rel="stylesheet" href="template/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <div class="content">
+        <h1>Welcome to the Tools Collection</h1>
+        <p>Here you will find a variety of tools to make your life easier!</p>
+
+        <h2>Available Tools</h2>
+        <ul>
+            <li><a href="Age-Calculator/index.html">Age Calculator</a></li>
+            <li><a href="Discount-Calculator/index.html">Discount Calculator</a></li>
+            <li><a href="BMI-Calculator/index.html">BMI Calculator</a></li>
+            <li><a href="Unit-Converter/index.html">Unit Converter</a></li>
+        </ul>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Load header and footer
+        fetch('template/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+            
+        fetch('template/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
