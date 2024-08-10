@@ -31,34 +31,25 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual appeal */
 }
 
-.left-header a {
-    text-align: left;
+.left-header {
     font-size: 1.5em; /* Increase font size for better visibility */
     font-weight: bold; /* Make the text bold */
-    color: white; /* Ensure the text color is white */
-    text-decoration: none; /* Remove underline */
 }
 
-.right-header a {
-    text-align: right;
+.right-header {
+    margin-left: auto; /* Pushes the right-header link to the far right */
     font-size: 1.2em; /* Slightly larger font size */
-    text-decoration: none; /* Remove underline */
-    color: white; /* Ensure the text color is white */
 }
 
-.right-header a:hover, .left-header a:hover {
-    text-decoration: underline; /* Add underline on hover for better interactivity */
-}
-/*
 #header a {
     color: white;
     text-decoration: none;
 }
 
 #header a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover for better interactivity */
 }
-    */
+
   
 .content {
     flex: 1;
