@@ -29,6 +29,15 @@
     justify-content: space-between; /* Align items on both sides */
     align-items: center;
   }
+
+  .left-header {
+    text-align: left;
+  }
+  
+  .right-header {
+    text-align: right;
+    margin-left: auto; /* Pushes the right-header link to the far right */
+  }
   
   #header a {
     color: white;
